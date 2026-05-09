@@ -1,11 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Course Home Page</title>
+    <meta name="description"
+        content="This is the course home page for WDD 231 including a home page about Anthony, a chamber of commerce, and a final project.">
+    <meta name="author" content="Anthony Sanders">
+
+    <!-- External Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" class="saira">
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Scripts -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
 </head>
+
 <body>
-    
+    <header>
+        <img src="images/rocket-lunch.svg" alt="Site Logo" width="512" height="512">
+        <span>Rocket Launch Services, Inc.</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="nav-tab">Home</h1>
+        <section class="section-header">
+            <h2>About Me</h2>
+            <p class="bio">My name's Anthony. Nice to virtually meet you! I was born in Ohio but currently live in WI. I currently
+                work as a Site Leader at an Amazon Sort Center. I'm interesting in switching career paths, moving from
+                Operations Management to Software Development at Amazon. I love spending time with my family and
+                anything to do with the outdoors or anything I can do with my hands! I especially love the outdoors!</p>
+        </section>
+        <section class="section-header">
+            <h2>Student Photo</h2>
+            <img src="images/student-profile.webp" alt="Anthony Sanders with his family" width="300" height="" loading="lazy">
+        </section>
+        <section class="course-section">
+            <h2>Web Certificate Course</h2>
+            <div class="filters">
+                <button id="all-Courses">All Courses</button>
+                <button id="wdd-Courses">WDD Courses</button>
+                <button id="cse-Courses">CSE Courses</button>
+            </div>
+            <span id="credit-total"></span>
+            <div class="courses"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/anthonysanderslds">
+                <img src="images/github-svgrepo-com.svg" alt="GitHub Icon" width="16" height="16">
+            </a>
+            <a href="www.linkedin.com/in/anthony-sanders-a8a59238">
+                <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" width="16" height="16">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img src="images/facebook-svgrepo-com.svg" alt="Facebook Icon" width="16" height="16">
+            </a>
+        </div>
+        <p>&copy; <span id="currentYear"></span>| Anthony Sanders | WI, USA</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
+
 </html>
