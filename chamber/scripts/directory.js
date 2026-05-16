@@ -1,5 +1,16 @@
+const today = new Date();
+const currentYearElement = document.getElementById("currentYear");
+currentYearElement.textContent = today.getFullYear();
+document.getElementById("lastModified").innerHTML = `Last Modified: ${document.lastModified}`;
 
-// directory.js
+const navButton = document.querySelector('#ham-btn');
+const navLinks = document.querySelector('#nav-bar');
+
+navButton.addEventListener('click', () => {
+    navButton.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
+
 const directoryContainer = document.getElementById("directory");
 const gridBtn = document.getElementById("grid-view");
 const listBtn = document.getElementById("list-view");
@@ -41,7 +52,7 @@ function displayMembers(members) {
 
     const fragment = document.createDocumentFragment();
 
-    members.forEach((member) => {
+    members.forEach((member, index) => {
         let card = document.createElement("div");
         let image = document.createElement("img");
         let name = document.createElement("h3");
@@ -54,9 +65,12 @@ function displayMembers(members) {
 
         image.setAttribute("src", member.image);
         image.setAttribute("alt", `${member.name} logo`);
-        image.setAttribute("loading", "lazy");
         image.setAttribute("width", "200");
         image.setAttribute("height", "200");
+
+        if (index > 0) {
+            image.setAttribute("loading", "lazy");
+        }
 
         name.textContent = member.name;
         address.textContent = member.address;
@@ -82,7 +96,6 @@ function displayMembers(members) {
 
     directoryContainer.appendChild(fragment);
 }
-
 
 // Toggle between grid and list views
 gridBtn.addEventListener("click", () => {
