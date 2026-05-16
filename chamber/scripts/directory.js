@@ -39,6 +39,8 @@ function getMembershipClass(level) {
 function displayMembers(members) {
     directoryContainer.innerHTML = "";
 
+    const fragment = document.createDocumentFragment();
+
     members.forEach((member) => {
         let card = document.createElement("div");
         let image = document.createElement("img");
@@ -75,9 +77,12 @@ function displayMembers(members) {
         card.appendChild(website);
         card.appendChild(badge);
 
-        directoryContainer.appendChild(card);
+        fragment.appendChild(card);
     });
+
+    directoryContainer.appendChild(fragment);
 }
+
 
 // Toggle between grid and list views
 gridBtn.addEventListener("click", () => {
