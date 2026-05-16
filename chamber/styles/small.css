@@ -1,7 +1,7 @@
 :root {
     --head-foot-background: #131A22;
     --text-color1: #232F3E;
-    --accent1: #146EB4;
+    --accent1: #0d5a94;
     --main-background: #FFFFFF;
     --section-background: #FF9900;
     --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -220,7 +220,7 @@ main h1 {
 
 .member-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: #4a4a4a;
     margin: 0.25rem 0;
 }
 
@@ -251,19 +251,19 @@ main h1 {
 
 .membership-gold {
     background-color: #FFF3CD;
-    color: #856404;
+    color: #6b5003;
     border: 1px solid #FFD700;
 }
 
 .membership-silver {
     background-color: #E8E8E8;
-    color: #555;
+    color: #333333;
     border: 1px solid #C0C0C0;
 }
 
 .membership-member {
     background-color: #D4EDDA;
-    color: #155724;
+    color: #0d4a1c;
     border: 1px solid #28A745;
 }
 
@@ -308,3 +308,4 @@ footer strong {
 footer div {
     margin-bottom: 1rem;
 }
+
