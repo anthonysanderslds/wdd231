@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Osceola Family Restaurant",
+        "address": "201 Cascade St, Osceola, WI 54020",
+        "phone": "(715) 294-2900",
+        "website": "https://www.osceolafamilyrestaurant.com",
+        "image": "images/osceola-family-restaurant.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Bill's Ace Hardware & Appliance",
+        "address": "202 Chieftain St, Osceola, WI 54020",
+        "phone": "(715) 294-3350",
+        "website": "https://www.acehardware.com",
+        "image": "images/bills-ace.webp",
+        "membershipLevel": 2
+    },
+    {
+        "name": "St. Croix Valley Realty",
+        "address": "105 River St, Osceola, WI 54020",
+        "phone": "(715) 294-3100",
+        "website": "https://www.stcroixvalleyrealty.com",
+        "image": "images/st-croix-realty.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Wildwood Flowers",
+        "address": "310 Cascade St, Osceola, WI 54020",
+        "phone": "(715) 294-4455",
+        "website": "https://www.wildwoodflowersosceola.com",
+        "image": "images/wildwood-flowers.webp",
+        "membershipLevel": 1
+    },
+    {
+        "name": "Security State Bank",
+        "address": "400 Chieftain St, Osceola, WI 54020",
+        "phone": "(715) 294-2141",
+        "website": "https://www.securitystatebankmarine.com",
+        "image": "images/security-state-bank.webp",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Studio A Salon and Spa",
+        "address": "215 Cascade St, Osceola, WI 54020",
+        "phone": "(715) 294-5500",
+        "website": "https://www.studioasalonandspa.com",
+        "image": "images/studio-a.webp",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Neumann Farms",
+        "address": "1200 County Rd S, Osceola, WI 54020",
+        "phone": "(715) 294-3800",
+        "website": "https://www.neumannfarms.com",
+        "image": "images/neumann-farms.webp",
+        "membershipLevel": 1
+    }
+]

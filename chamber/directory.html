@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Directory | Chamber of Commerce</title>
-    <meta name="description" content="Directory of businesses and organizations belonging to the Osceola Chamber of Commerce">
+    <meta name="description"
+        content="Directory of businesses and organizations belonging to the Osceola Chamber of Commerce">
     <meta name="author" content="Anthony Sanders">
 
     <!-- Favicon -->
-    <link rel="Icon" href="images/chamber.ico">
+    <link rel="icon" href="images/chamber.ico">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Osceola Chamber of Commerce - Directory">
-    <meta property="og:description"
-        content="Find local businesses and organizations in Osceola, WI.">
-    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Find local businesses and organizations in Osceola, WI.">
+    <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/images/student-profile.webp">
     <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/chamber/directory.html">
 
-    <!-- External Font -->
+    <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" class="saira">
-    
+
+    <!-- Google Fonts - Non-Render-Blocking -->
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:wght@400;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:wght@400;700&display=swap"
+            rel="stylesheet">
+    </noscript>
+
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/small.css">
-    <link rel="stylesheet" href="/styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 600px)">
 
     <!-- Scripts -->
-    <script src="/scripts/navigation.js" defer></script>
-    <script src="/scripts/date.js" defer></script>
-    <script src="/scripts/course.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+
+    <!-- Attempt a improving performance issues-->
+    <link rel="preload" as="image" href="images/osceola-family-restaurant.jpeg">
+
+
 </head>
+
 <body>
     <header>
-        <img src="images/chamber.webp" alt="Site Logo">
+        <img src="images/chamber.webp" alt="Osceola Chamber of Commerce Logo" width="40" height="40">
         <span>Osceola Chamber of Commerce</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html" class="active">Directory</a>
+            <a href="discover.html">Discover</a>
+            <a href="join.html">Join</a>
+        </nav>
     </header>
-    <nav id="nav-bar" class="navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="directory.html" class="active">Directory</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="join.html">Join</a></li>
-        </ul>
-    </nav>
     <main>
-        <img src="" alt="">
+        <h1>Directory</h1>
+        <div class="directory-controls">
+            <button id="grid-view" aria-label="Grid View">&#9638;</button>
+            <button id="list-view" aria-label="List View">&#9776;</button>
+        </div>
+        <section id="directory" class="grid-layout"></section>
     </main>
     <footer>
         <div>
@@ -60,14 +79,14 @@
             <p>(555) 555-5555</p>
         </div>
         <div class="social">
-            <a href="https://github.com/anthonysanderslds">
-                <img src="/images/github-svgrepo-com.svg" alt="GitHub Icon" width="16" height="16">
+            <a href="https://github.com/anthonysanderslds" aria-label="GitHub">
+                <img src="images/github-svgrepo-com.svg" alt="GitHub Icon" width="16" height="16">
             </a>
-            <a href="www.linkedin.com/in/anthony-sanders-a8a59238">
-                <img src="/images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" width="16" height="16">
+            <a href="https://www.linkedin.com/in/anthony-sanders-a8a59238" aria-label="LinkedIn">
+                <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" width="16" height="16">
             </a>
-            <a href="https://www.facebook.com/">
-                <img src="/images/facebook-svgrepo-com.svg" alt="Facebook Icon" width="16" height="16">
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+                <img src="images/facebook-svgrepo-com.svg" alt="Facebook Icon" width="16" height="16">
             </a>
         </div>
         <div>
@@ -78,4 +97,5 @@
         </div>
     </footer>
 </body>
+
 </html>
