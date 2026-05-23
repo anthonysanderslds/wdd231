@@ -59,7 +59,7 @@ function displayMembers(members) {
         let address = document.createElement("p");
         let phone = document.createElement("p");
         let website = document.createElement("a");
-        let badge = document.createElement("span");
+        let badge = document.createElement("p");
 
         card.classList.add("member-card");
 

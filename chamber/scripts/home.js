@@ -66,16 +66,16 @@ fetchSpotlights();
 
 //display current weather data
 function displayCurrentWeather(data) {
-    currentTemp.innerHTML = `<b>${data.main.temp}</b>&deg;F`;
-    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    currentTemp.innerHTML = `<b>${Math.round(data.main.temp)}</b>&deg;F`;
+    const iconsrc = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     const desc = data.weather[0].main;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', desc);
     captionDesc.innerHTML = desc;
 
     //set up high, low, and humidity
-    tempMax.innerHTML = `High: ${data.main.temp_max}&deg;F`;
-    tempMin.innerHTML = `Low: ${data.main.temp_min}&deg;F`;
+    tempMax.innerHTML = `High: ${Math.round(data.main.temp_max)}&deg;F`;
+    tempMin.innerHTML = `Low: ${Math.round(data.main.temp_min)}&deg;F`;
     humidity.innerHTML = `Humidity: ${data.main.humidity}%`;
 
     //convert sunrise time
