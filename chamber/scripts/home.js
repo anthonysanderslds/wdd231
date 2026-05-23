@@ -146,7 +146,7 @@ function displayRandomMembers(selectedMembers) {
         cardTagLine.classList.add('tagLine');
         cardEmail.innerHTML = `<b>EMAIL: </b>${member.email}`;
         cardPhone.innerHTML = `<b>PHONE: </b>${member.phone}`;
-        cardAddress.innerHTML = member.address;
+        cardAddress.innerHTML = `<b>ADDRESS: </b>${member.address}`;
         cardUrl.setAttribute('href', member.website);
         cardUrl.setAttribute("target", "_blank");
         cardUrl.setAttribute("rel", "noopener noreferrer");
