@@ -68,6 +68,46 @@
     .social {
         margin: 0;
     }
+
+    /* ===== Homepage Events, Weather Sections =====*/
+    #weather-events-grid {
+        display: grid;
+        grid-template-columns: 45% 27.5% 27.5%;
+    }
+    
+    #events {
+        grid-column: 1 / 2;
+    }
+    
+    section.current-weather {
+        grid-column: 2 / 3;
+    }
+
+    .current-weather-layout {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .current-weather-layout img {
+        width: 50px;
+        align-self: center;
+    }
+
+    .current-weather-layout p {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* ===== Spotlight Businesses ===== */
+    #spotlights {
+        flex-direction: row;
+    }
+
+    .spotlight-card {
+        flex: 1;
+    }
 }
 
 /* ===== Extra Large Viewport (900px+) ===== */
@@ -81,5 +121,6 @@
         max-width: 180px;
         height: 180px;
     }
-}
 
+
+}

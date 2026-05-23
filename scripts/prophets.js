@@ -22,8 +22,7 @@ const displayProphets = (prophets) => {
 
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
         dob.textContent = `Date of Birth: ${prophet.birthdate}`;
-        pob.textCoeifjcbvbhghblnurthddurvcdihlfrtjbrlubhfnculc
-        ntent = `Place of Birth: ${prophet.birthplace}`;
+        pob.textContent = `Place of Birth: ${prophet.birthplace}`;
         portrait.setAttribute('src', prophet.imageurl);
         portrait.setAttribute('alt', `President ${prophet.name} ${prophet.lastname}`);
         portrait.setAttribute('loading', 'lazy'),

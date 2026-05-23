@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Directory | Chamber of Commerce</title>
+    <title>Home | Chamber of Commerce</title>
     <meta name="description"
-        content="Directory of businesses and organizations belonging to the Osceola Chamber of Commerce">
+        content="Landing page of businesses and organizations belonging to the Osceola Chamber of Commerce">
     <meta name="author" content="Anthony Sanders">
 
     <!-- Favicon -->
     <link rel="icon" href="images/chamber.ico">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Osceola Chamber of Commerce - Directory">
+    <meta property="og:title" content="Osceola Chamber of Commerce - Home">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Find local businesses and organizations in Osceola, WI.">
     <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/images/student-profile.webp">
-    <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/chamber/directory.html">
+    <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/chamber/index.html">
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,32 +40,53 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 600px)">
 
     <!-- Scripts -->
-    <script src="scripts/directory.js" defer></script>
-
-    <!-- Attempt a improving performance issues-->
-    <link rel="preload" as="image" href="images/osceola-family-restaurant.webp">
-    <link rel="preload" as="fetch" href="data/members.json" crossorigin>
+    <script src="scripts/home.js" defer></script>
 </head>
 
-<body class="directory">
+<body class="home">
     <header>
         <img src="images/chamber.webp" alt="Osceola Chamber of Commerce Logo" width="40" height="40">
         <span>Osceola Chamber of Commerce</span>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"></button>
         <nav id="nav-bar" class="navigation" aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html" class="active">Directory</a>
-            <a href="discover.html">Discover</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="directory.html">Directory</a>
             <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
         </nav>
     </header>
     <main>
-        <h1>Directory</h1>
-        <div class="directory-controls">
-            <button id="grid-view" aria-label="Grid View">&#9638;</button>
-            <button id="list-view" aria-label="List View">&#9776;</button>
+        <div id="hero-join-content">
+            <img class="hero" src="images/chamber-image.jpg" alt="Main location of Osceola Chamber of Commerce" width="1200"
+                height="400">
+            <button class="join">Join Our Chamber</button>
         </div>
-        <section id="directory" class="grid-layout"></section>
+        <h1>Home</h1>
+        <div id="weather-events-grid">
+            <section class="events">
+                <h2>Events</h2>
+            </section>
+            <section class="current-weather">
+                <h2>Current Weather</h2>
+                <div class="current-weather-layout">
+                    <img id="weather-icon" src="" alt="">
+                    <div class="cweather-details">
+                        <p id="current-weather"></p>
+                        <p id="weather-desc"></p>
+                        <p id="temp-max"></p>
+                        <p id="temp-min"></p>
+                        <p id="humidity"></p>
+                        <p id="sunrise"></p>
+                        <p id="sunset"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="forecast">
+                <h2>Weather Forecast</h2>
+                <div id="weather-forecast"></div>
+            </section>
+        </div>
+        <section id="spotlights"></section>
     </main>
     <footer>
         <div>

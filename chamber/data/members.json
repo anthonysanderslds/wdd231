@@ -5,7 +5,9 @@
         "phone": "(715) 294-2900",
         "website": "https://www.osceolafamilyrestaurant.com",
         "image": "images/osceola-family-restaurant.webp",
-        "membershipLevel": 3
+        "membershipLevel": 3,
+        "tagLine": "Enjoy the best hometown cooking in Osceola!",
+        "email": "ofr@occ.com"
     },
     {
         "name": "Bill's Ace Hardware & Appliance",
@@ -13,7 +15,9 @@
         "phone": "(715) 294-3350",
         "website": "https://www.acehardware.com",
         "image": "images/bills-ace.webp",
-        "membershipLevel": 2
+        "membershipLevel": 2,
+        "tagLine": "Serving all of your hardware needs!",
+        "email": "bills@occ.com"
     },
     {
         "name": "St. Croix Valley Realty",
@@ -21,7 +25,9 @@
         "phone": "(715) 294-3100",
         "website": "https://www.stcroixvalleyrealty.com",
         "image": "images/st-croix-realty.webp",
-        "membershipLevel": 3
+        "membershipLevel": 3,
+        "tagLine": "Come find your forever home with us!",
+        "email": "stcroixrealty@occ.com"
     },
     {
         "name": "Wildwood Flowers",
@@ -29,7 +35,9 @@
         "phone": "(715) 294-4455",
         "website": "https://www.wildwoodflowersosceola.com",
         "image": "images/wildwood-flowers.webp",
-        "membershipLevel": 1
+        "membershipLevel": 1,
+        "tagLine": "Blooming all of your buds!",
+        "email": "wildwoodflowers@occ.com"
     },
     {
         "name": "Security State Bank",
@@ -37,7 +45,9 @@
         "phone": "(715) 294-2141",
         "website": "https://www.securitystatebankmarine.com",
         "image": "images/security-state-bank.webp",
-        "membershipLevel": 3
+        "membershipLevel": 3,
+        "tagLine": "Financial planning for the future!",
+        "email": "ssb@occ.com"
     },
     {
         "name": "Studio A Salon and Spa",
@@ -45,7 +55,9 @@
         "phone": "(715) 294-5500",
         "website": "https://www.studioasalonandspa.com",
         "image": "images/studio-a.webp",
-        "membershipLevel": 2
+        "membershipLevel": 2,
+        "tagLine": "A cut and style above the rest!",
+        "email": "studioa@occ.com"
     },
     {
         "name": "Neumann Farms",
@@ -53,6 +65,8 @@
         "phone": "(715) 294-3800",
         "website": "https://www.neumannfarms.com",
         "image": "images/neumann-farms.webp",
-        "membershipLevel": 1
+        "membershipLevel": 1,
+        "tagLine": "We're farming for your family!",
+        "email": "neumannfarms@occ.com"
     }
 ]
