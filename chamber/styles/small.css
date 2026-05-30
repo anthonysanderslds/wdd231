@@ -1,4 +1,3 @@
-
 :root {
     --head-foot-background: #131A22;
     --text-color1: #232F3E;
@@ -654,6 +653,21 @@ dialog button:hover {
 }
 
 div#form-recap {
-    border: 1px solid #000;
-    border-radius: var(--border-radius);
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#form-recap p {
+    padding: 0.5rem;
+}
+
+.thank-you-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.thank-you-page main {
+    flex: 1;
+    margin: 0 auto;
 }
