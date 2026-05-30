@@ -101,6 +101,10 @@ function displayCourses(courseArray) {
             cCard.classList.add('completed');
         }
 
+        cCard.addEventListener('click', () => {
+            displayModal(course);
+        })
+
     });
 
     courseTotal.textContent = "";
@@ -128,3 +132,46 @@ filters.addEventListener('click', (event) => {
 
     displayCourses(filterCourses);
 });
+
+function displayModal(course) {
+    const myModal = document.querySelector('#courseModal');
+    myModal.innerHTML = '';
+
+    let title = document.createElement('h2');
+    title.classList.add('modalTitle');
+    title.textContent = `${course.subject} ${course.number}`;
+    let header = document.createElement('h2');
+    header.classList.add('modalHeader');
+    header.textContent = course.title;
+    let credits = document.createElement('p');
+    credits.textContent = `${course.credits} credits`;
+    let certificate = document.createElement('p');
+    certificate.textContent = `Certificate: ${course.certificate}`;
+    let description = document.createElement('p');
+    description.textContent = course.description;
+    let tech = document.createElement('p');
+    tech.textContent = `Technology: ${course.technology.join(', ')}`;
+    let modalButton = document.createElement('button');
+    modalButton.textContent = '❌';
+
+    myModal.appendChild(title);
+    myModal.appendChild(header);
+    myModal.appendChild(credits);
+    myModal.appendChild(certificate);
+    myModal.appendChild(description);
+    myModal.appendChild(tech);
+    myModal.appendChild(modalButton);
+
+    modalButton.addEventListener('click', () => {
+        myModal.close();
+    });
+
+    myModal.addEventListener('click', (event) => {
+        if (event.target === myModal){
+            myModal.close();
+        }
+    });
+
+    myModal.showModal();
+}
+

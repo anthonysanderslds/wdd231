@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Chamber of Commerce</title>
-    <meta name="description"
-        content="Landing page of businesses and organizations belonging to the Osceola Chamber of Commerce">
+    <title>Join | Chamber of Commerce</title>
+    <meta name="description" content="Form page for new businesses to join the Osceola Chamber of Commerce">
     <meta name="author" content="Anthony Sanders">
 
     <!-- Favicon -->
     <link rel="icon" href="images/chamber.ico">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Osceola Chamber of Commerce - Home">
+    <meta property="og:title" content="Osceola Chamber of Commerce - Join">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Find local businesses and organizations in Osceola, WI.">
     <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/images/student-profile.webp">
@@ -40,56 +39,24 @@
     <link rel="stylesheet" href="styles/larger.css" media="(min-width: 600px)">
 
     <!-- Scripts -->
-    <script src="scripts/home.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 </head>
 
-<body class="home">
+<body class="join-page">
     <header>
         <img src="images/chamber.webp" alt="Osceola Chamber of Commerce Logo" width="40" height="40">
         <span>Osceola Chamber of Commerce</span>
         <button id="ham-btn" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"></button>
         <nav id="nav-bar" class="navigation" aria-label="Main navigation">
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
-            <a href="join.html">Join</a>
+            <a href="join.html" class="active">Join</a>
             <a href="discover.html">Discover</a>
         </nav>
     </header>
     <main>
-        <div id="hero-join-content">
-            <img class="hero" src="images/chamber-image.jpg" alt="Main location of Osceola Chamber of Commerce"
-                width="1200" height="400">
-            <a href="join.html" class="join">Join our Chamber!</a>
-            </div>
-        <h1>Home</h1>
-        <div id="weather-events-grid">
-            <section class="events">
-                <h2>Events</h2>
-                <p>Chamber Dinner - 6/25</p>
-                <p>Helping Hands Event - 6/30</p>
-                <p>Chamber Seminar - 7/10</p>
-            </section>
-            <section class="current-weather">
-                <h2>Current Weather</h2>
-                <div class="current-weather-layout">
-                    <img id="weather-icon" src="#" alt="#">
-                    <div class="cweather-details">
-                        <p id="current-weather"></p>
-                        <p id="weather-desc"></p>
-                        <p id="temp-max"></p>
-                        <p id="temp-min"></p>
-                        <p id="humidity"></p>
-                        <p id="sunrise"></p>
-                        <p id="sunset"></p>
-                    </div>
-                </div>
-            </section>
-            <section class="forecast">
-                <h2>Weather Forecast</h2>
-                <div id="weather-forecast"></div>
-            </section>
-        </div>
-        <div id="spotlights"></div>
+        <h1 id="thankYou">Thank You for Your Application!</h1>
+        <div id="form-recap"></div>
     </main>
     <footer>
         <div>

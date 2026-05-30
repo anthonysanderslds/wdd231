@@ -212,3 +212,43 @@ footer {
 .social a:hover {
     background-color: #ddd;
 }
+
+/* --------------------------- Modal --------------------------*/
+dialog {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: .5rem;
+    box-shadow: 0 0 .5rem #777;
+    width: 90%;
+    max-width: 600px;
+    color: var(--text-color1);
+    margin: auto;
+}
+
+::backdrop {
+    background: rgba(19, 26, 34, 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border-style: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--text-color1);
+}
+
+.modalTitle {
+    text-align: center;
+    background-color: #131a22;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.modalHeader {
+    text-align: left;
+    background-color: none;
+    padding: 10px;
+}
