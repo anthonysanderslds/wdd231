@@ -57,67 +57,69 @@
     <main>
         <h1>Join</h1>
         <form action="thankyou.html" method="get">
-            <h3>Personal Information</h3>
+            <h2>Personal Information</h2>
             <label id="first">First Name <input type="text" name="first" required autocomplete="given-name"
                     title="Your First Name" placeholder=" "></label>
             <label id="last">Last Name <input type="text" name="last" required autocomplete="family-name"
                     title="Your Last Name" placeholder=" "></label>
-            <label id="org-title">Organizational Title <input type="text" name="org-title" autocomplete="organization-title"
+            <label id="org-title">Organizational Title <input type="text" name="org-title"
+                    autocomplete="organization-title"
                     title="Must be at least 7 characters; letters, hyphens, and spaces only"
                     placeholder="Chief Executive Officer" minlength="7" pattern="[a-zA-Z\s\-]{7,}" required></label>
-            <label id="email">Email <input type="email" name="email" required placeholder="something@domain.com" title="Your Email"
-                    autocomplete="email"></label>
+            <label id="email">Email <input type="email" name="email" required placeholder="something@domain.com"
+                    title="Your Email" autocomplete="email"></label>
             <label id="phone">Mobile Phone Number <input type="tel" name="phone" required placeholder="987-555-1234"
                     title="A Phone Number with dashes" autocomplete="tel"></label>
-            <label id="business">Business/Organization Name <input type="text" name="business" title="The name of your organization"
-                    autocomplete="organization" placeholder=" " required></label>
-            
-            <h3>Select Membership Level</h3>
+            <label id="business">Business/Organization Name <input type="text" name="business"
+                    title="The name of your organization" autocomplete="organization" placeholder=" " required></label>
+
+            <h2>Select Membership Level</h2>
             <fieldset id="radio-section">
-                <label><input type="radio" name="membershipLevel" value="Non-Profit-Membership" checked> Non-Profit</label>
-                <label><input type="radio" name="membershipLevel" value="Bronze"> Bronze</label>
-                <label><input type="radio" name="membershipLevel" value="Silver"> Silver</label>
-                <label><input type="radio" name="membershipLevel" value="Gold"> Gold</label>
+                <label><input type="radio" name="membershipLevel" value="np" checked>
+                    Non-Profit</label>
+                <label><input type="radio" name="membershipLevel" value="bronze"> Bronze</label>
+                <label><input type="radio" name="membershipLevel" value="silver"> Silver</label>
+                <label><input type="radio" name="membershipLevel" value="gold"> Gold</label>
             </fieldset>
 
 
-            <h3>Organization Description</h3>
-            <label id="text-area">Description <textarea title="A brief description of the Organization" name="org-description"
-                    rows="4"></textarea></label>
+            <h2>Organization Description</h2>
+            <label id="text-area">Description <textarea title="A brief description of the Organization"
+                    name="org-description" rows="4"></textarea></label>
 
             <label><input type="hidden" name="timestamp" id="timestamp"></label>
             <button type="submit" id="submit-form">Submit Application</button>
         </form>
         <div class="membership-modals">
             <div>
-                <h3 id="np">🤝</h3>
-                <h4>Non-Profit Membership</h4>
+                <h2 id="np">🤝</h2>
+                <h3>Non-Profit Membership</h3>
                 <p>Free! Designed for Non-Profit Organizations</p>
                 <button id="np-membership">Learn More</button>
             </div>
             <div>
-                <h3 id="gold">🥇</h3>
-                <h4>Gold Membership</h4>
+                <h2 id="gold">🥇</h2>
+                <h3>Gold Membership</h3>
                 <p>$500/year</p>
                 <p>Top-Tier Benefits</p>
                 <button id="gold-membership">Learn More</button>
             </div>
             <div>
-                <h3 id="silver">🥈</h3>
-                <h4>Silver Membership</h4>
+                <h2 id="silver">🥈</h2>
+                <h3>Silver Membership</h3>
                 <p>$150/year</p>
                 <p>Mid-Tier Benefits</p>
                 <button id="silver-membership">Learn More</button>
             </div>
             <div>
-                <h3 id="bronze">🥉</h3>
-                <h4>Bronze Membership</h4>
+                <h2 id="bronze">🥉</h2>
+                <h3>Bronze Membership</h3>
                 <p>$50/year</p>
                 <p>Basic Benefits</p>
                 <button id="bronze-membership">Learn More</button>
             </div>
             <dialog id="np-dialog">
-                <h3>Non-Profit Membership Benefits</h3>
+                <h2>Non-Profit Membership Benefits</h2>
                 <ul>
                     <li>Listed in the community business directory</li>
                     <li>Access to networking events and workshops</li>
@@ -126,16 +128,16 @@
                 <button aria-label="Close">&times;</button>
             </dialog>
             <dialog id="gold-dialog">
-                <h3>Gold Membership Benefits</h3>
+                <h2>Gold Membership Benefits</h2>
                 <ul>
                     <li>All Silver benefits included</li>
                     <li>Dedicated advertising banner on the Chamber homepage year-round</li>
                     <li>Exclusive invitation to executive roundtable events with local leaders</li>
                 </ul>
-                <button aria-label="Close"">&times;</button>
+                <button aria-label="Close">&times;</button>
             </dialog>
             <dialog id="silver-dialog">
-                <h3>Silver Membership Benefits</h3>
+                <h2>Silver Membership Benefits</h2>
                 <ul>
                     <li>All Bronze benefits included</li>
                     <li>Featured listing on the Chamber homepage for one month per year</li>
@@ -144,7 +146,7 @@
                 <button aria-label="Close">&times;</button>
             </dialog>
             <dialog id="bronze-dialog">
-                <h3>Bronze Membership Benefits</h3>
+                <h2>Bronze Membership Benefits</h2>
                 <ul>
                     <li>All Non-Profit benefits included</li>
                     <li>10% discount on event booth rentals</li>

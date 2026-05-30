@@ -470,13 +470,13 @@ footer div {
     animation-delay: 0.6s;
 }
 
-.membership-modals h3 {
+.membership-modals h2 {
     font-size: 4rem;
     padding: 0;
     margin: 0;
 }
 
-.membership-modals h4 {
+.membership-modals h3 {
     font-size: 2rem;
     padding: 0;
     margin: 0;
@@ -512,7 +512,7 @@ form {
     margin-bottom: 2rem;
 }
 
-form h3 {
+form h2 {
     color: var(--head-foot-background);
     border-bottom: 2px solid var(--section-background);
     padding-bottom: 5px;
@@ -609,7 +609,7 @@ dialog {
     background: rgba(19, 26, 34, 0.7);
 }
 
-dialog h3 {
+dialog h2 {
     color: var(--head-foot-background);
     border-bottom: 2px solid var(--section-background);
     padding-bottom: 0.5rem;
