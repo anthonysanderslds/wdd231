@@ -128,7 +128,7 @@ function displayRandomMembers(selectedMembers) {
 
     selectedMembers.forEach(member => {
         const sCard = document.createElement('div');
-        sCard.classList.add('spotlight-card');
+        sCard.classList.add('spotlight-card', 'card');
         let cardBusinessName = document.createElement('h2');
         let cardLogo = document.createElement('img');
         let cardTagLine = document.createElement('p');

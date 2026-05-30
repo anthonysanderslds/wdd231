@@ -1,3 +1,4 @@
+
 :root {
     --head-foot-background: #131A22;
     --text-color1: #232F3E;
@@ -23,6 +24,42 @@ body {
     line-height: 1.6;
 }
 
+/* ===== Shared Patterns ===== */
+header span,
+main h1,
+.member-card h3,
+footer strong {
+    font-family: 'Saira', sans-serif;
+}
+
+.card {
+    background-color: var(--main-background);
+    border: 1px solid #e8e8e8;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+form h2,
+dialog h2 {
+    color: var(--head-foot-background);
+    border-bottom: 2px solid var(--section-background);
+    padding-bottom: 0.5rem;
+}
+
+.member-card a,
+.spotlight-card a {
+    color: var(--accent1);
+    text-decoration: none;
+    word-break: break-all;
+}
+
 /* ===== Header ===== */
 header {
     background-color: var(--head-foot-background);
@@ -43,7 +80,6 @@ header img {
 }
 
 header span {
-    font-family: 'Saira', Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     margin-left: 0.75rem;
@@ -92,7 +128,6 @@ header span {
 #nav-bar a:hover,
 #nav-bar a.active {
     background-color: var(--accent1);
-    color: var(--main-background);
 }
 
 /* ===== Main Content ===== */
@@ -103,9 +138,7 @@ main {
 }
 
 main h1 {
-    font-family: 'Saira', sans-serif;
     font-size: 1.75rem;
-    color: var(--text-color1);
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 3px solid var(--section-background);
@@ -186,18 +219,7 @@ main h1 {
 
 /* ===== Member Card ===== */
 .member-card {
-    background-color: var(--main-background);
-    border: 1px solid #e8e8e8;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
     text-align: center;
-    box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-}
-
-.member-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--card-hover-shadow);
 }
 
 .member-card img {
@@ -212,9 +234,7 @@ main h1 {
 }
 
 .member-card h3 {
-    font-family: 'Saira', sans-serif;
     font-size: 1.1rem;
-    color: var(--text-color1);
     margin: 0.5rem 0;
 }
 
@@ -225,10 +245,7 @@ main h1 {
 }
 
 .member-card a {
-    color: var(--accent1);
-    text-decoration: none;
     font-size: 0.85rem;
-    word-break: break-all;
     transition: color var(--transition-speed);
 }
 
@@ -282,7 +299,6 @@ footer p {
 }
 
 footer strong {
-    font-family: 'Saira', sans-serif;
     font-size: 1.1rem;
 }
 
@@ -309,7 +325,7 @@ footer div {
     margin-bottom: 1rem;
 }
 
-/* ===== hero image =====*/
+/* ===== Hero Image ===== */
 #hero-join-content {
     position: relative;
 }
@@ -342,7 +358,7 @@ footer div {
     box-shadow: var(--card-hover-shadow);
 }
 
-/* ===== Weather/Events Section =====*/
+/* ===== Weather/Events Section ===== */
 #weather-events-grid section {
     padding: 10px;
     border-radius: var(--border-radius);
@@ -359,14 +375,12 @@ footer div {
 
 .forecast-card {
     display: flex;
-    padding: 0;
     justify-content: center;
     gap: 10px;
     align-items: center;
 }
 
-
-/* ===== Spotlight Businesses =====*/
+/* ===== Spotlight Businesses ===== */
 #spotlights {
     display: flex;
     flex-direction: column;
@@ -377,13 +391,7 @@ footer div {
     display: grid;
     grid-template-columns: 100px 1fr;
     gap: 5px;
-    background-color: var(--main-background);
-    border: 1px solid #e8e8e8;
-    border-radius: var(--border-radius);
-    padding: 1.5rem;
     align-items: start;
-    box-shadow: var(--card-shadow);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     overflow: hidden;
 }
 
@@ -422,10 +430,7 @@ footer div {
 
 .spotlight-card a {
     grid-column: 2;
-    color: var(--accent1);
-    text-decoration: none;
     text-align: left;
-    word-break: break-all;
     overflow-wrap: break-word;
 }
 
@@ -438,9 +443,8 @@ footer div {
     text-align: center;
 }
 
-/* ===== Membership Card Animation & Design (Join Page) =====*/
+/* ===== Membership Card Animation & Design (Join Page) ===== */
 .membership-modals div {
-    display: block;
     text-align: center;
     border: 1px solid #000;
     border-radius: var(--border-radius);
@@ -452,10 +456,6 @@ footer div {
     box-shadow: var(--card-hover-shadow);
     background-color: #C0C0C0;
     animation: fadeSlideIn 1s forwards;
-}
-
-.membership-modals div:nth-child(1) {
-    animation-delay: 0s;
 }
 
 .membership-modals div:nth-child(2) {
@@ -470,16 +470,18 @@ footer div {
     animation-delay: 0.6s;
 }
 
-.membership-modals h2 {
-    font-size: 4rem;
+.membership-modals h2,
+.membership-modals h3 {
     padding: 0;
     margin: 0;
 }
 
+.membership-modals h2 {
+    font-size: 4rem;
+}
+
 .membership-modals h3 {
     font-size: 2rem;
-    padding: 0;
-    margin: 0;
 }
 
 .membership-modals button {
@@ -503,7 +505,7 @@ footer div {
     }
 }
 
-/* Form Layout Design */
+/* ===== Form Layout Design ===== */
 form {
     background: white;
     padding: 1.5rem;
@@ -513,9 +515,6 @@ form {
 }
 
 form h2 {
-    color: var(--head-foot-background);
-    border-bottom: 2px solid var(--section-background);
-    padding-bottom: 5px;
     margin-top: 10px;
 }
 
@@ -576,7 +575,6 @@ input[type='radio'] {
     margin: 0;
 }
 
-
 #submit-form {
     width: 100%;
     padding: 0.75rem;
@@ -594,6 +592,7 @@ input[type='radio'] {
     box-shadow: var(--card-hover-shadow);
 }
 
+/* ===== Dialog ===== */
 dialog {
     background: white;
     border-radius: var(--border-radius);
@@ -610,9 +609,6 @@ dialog {
 }
 
 dialog h2 {
-    color: var(--head-foot-background);
-    border-bottom: 2px solid var(--section-background);
-    padding-bottom: 0.5rem;
     text-align: center;
 }
 
@@ -652,12 +648,12 @@ dialog button:hover {
     background-color: var(--section-background);
 }
 
-/* Thank You Page */
+/* ===== Thank You Page ===== */
 #thankYou {
     text-align: center;
 }
 
 div#form-recap {
-    border: #000;
+    border: 1px solid #000;
     border-radius: var(--border-radius);
 }
