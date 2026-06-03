@@ -145,6 +145,30 @@
     #submit-form {
         grid-column: 1 / -1;
     }
+
+}
+
+/* ===== Extra Large Viewport (641px+) ===== */
+@media (min-width: 641px) {
+    #discover-cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "card1 card2"
+        "card3 card4"
+        "card5 card6"
+        "card7 card8";
+    }
+
+    /* ===== Hover effect on Discover cards ===== */
+    .discover-figure img {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .discover-figure img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
 }
 
 /* ===== Extra Large Viewport (900px+) ===== */
@@ -157,5 +181,15 @@
     .member-card img {
         max-width: 180px;
         height: 180px;
+    }
+}
+
+/* ===== Extra Large Viewport (1025px+) ===== */
+@media (min-width: 1025px) {
+    #discover-cards {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "card1 card2 card3 card4"
+        "card5 card6 card7 card8";
     }
 }

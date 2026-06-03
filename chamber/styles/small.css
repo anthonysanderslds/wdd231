@@ -671,3 +671,90 @@ div#form-recap {
     flex: 1;
     margin: 0 auto;
 }
+
+/* ===== Discover Page ===== */
+#discover-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    align-items: stretch;
+}
+
+.discover-items button {
+    background-color: var(--head-foot-background);
+    color: var(--main-background);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+    margin-top: auto;
+}
+
+.discover-items button:hover {
+    background-color: var(--section-background);
+    color: var(--head-foot-background);
+    box-shadow: var(--card-hover-shadow);
+}
+
+#visitMessage {
+    background-color: var(--some-light-color);
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.discover-items {
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    padding: 0.5rem;
+}
+
+.discover-items img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+#discover-cards .discover-items:nth-child(1) {
+    grid-area: card1;
+}
+
+#discover-cards .discover-items:nth-child(2) {
+    grid-area: card2;
+}
+
+#discover-cards .discover-items:nth-child(3) {
+    grid-area: card3;
+}
+
+#discover-cards .discover-items:nth-child(4) {
+    grid-area: card4;
+}
+
+#discover-cards .discover-items:nth-child(5) {
+    grid-area: card5;
+}
+
+#discover-cards .discover-items:nth-child(6) {
+    grid-area: card6;
+}
+
+#discover-cards .discover-items:nth-child(7) {
+    grid-area: card7;
+}
+
+#discover-cards .discover-items:nth-child(8) {
+    grid-area: card8;
+}
