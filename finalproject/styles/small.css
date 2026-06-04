@@ -1,16 +1,139 @@
-    * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+:root {
+    --hf-background: #131A22;
+    --text-color: #232F3E;
+    --accent1: #146EB4;
+    --accent2: #006666;
+    --main-background: #FFFFFF;
+    --transition-speed: 0.3s;
 }
 
-:root {
-    --head-foot-background: #131A22;
-    --text-color1: black;
-    --accent1: #146EB4;
-    --main-background: #FFFFFF;
-    --section-background: #FF9900;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--main-background);
+    line-height: 1.6;
+}
+
+/* ===== Header & Footer ===== */
+header {
+    background-color: var(--hf-background);
+    color: var(--main-background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+footer {
+    background-color: var(--hf-background);
+    color: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+    flex-wrap: wrap;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.social a img {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    transition: transform var(--transition-speed), opacity var(--transition-speed);
+}
+
+.social a img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* ===== Navigation Hamburger ===== */
+#ham-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===== Main Content ===== */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ===== Headings ===== */
+h2 {
+    position: absolute;
+    top: -1.2rem;
+    left: -0.75rem;
+    background-color: var(--hf-background);
+    color: var(--main-background);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+/* ===== Sections ===== */
+section {
+    position: relative;
+    margin: 2rem 0.5rem 1rem;
+    padding: 2.5rem 1.5rem 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 5px;
+    border-radius: 10px;
+    align-self: center;
+}
+
+/* ===== Lists ===== */
+ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* ===== Code Elements (hex values) ===== */
+code {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    background-color: #e8e8e8;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+}
+
+/* ===== Links ===== */
+a {
+    color: var(--accent2);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    text-decoration: underline;
 }

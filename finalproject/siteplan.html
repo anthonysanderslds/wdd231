@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project Site Plan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <script src="scripts/base.js" defer></script>
 </head>
+
 <body>
     <header>
-        <img src="images/store-house.svg" alt="Site Logo" width="100" height="100">
-        <span>Food Storage & Inventory Management</span>
+        <img src="images/store-house.svg" alt="Site Logo" width="75" height="75">
+        <h1>Food Storage & Inventory Management (Site Plan)</h1>
         <button id="ham-btn" class="hamburger"></button>
     </header>
     <main>
-        <h1>Site Plan</h1>
+        <h1>Site Plan Details</h1>
         <section>
-            <h2>Home Page</h2>
-            <p>Purpose: Serve as a landing page for getting started with the food storage inventory tracking tool</p>
-            <p>This page would have a form which the user can use to input family size, duration, and other details needed to assess health of food storage</p>
+            <h2>Site Name - Food Storage & Inventory Management</h2>
+            <p><strong>Purpose:</strong> Serves as a personal use tool for food storage inventory tracking</p>
         </section>
         <section>
-            <h2>Inventory Tracking Page</h2>
-            <p>Page that allows the user to review the current inventory with accompanying details</p>
-            <p>form here</p>
+            <h2>Site Purpose</h2>
+            <p>This project allows a user to more effectively manage their food storage inventory by just scanning a
+                barcode of the item they are storing. The goal is to encourage food storage given the streamlined
+                approach to doing so with this tool.</p>
         </section>
         <section>
-            <h2>Update Inventory Page</h2>
-            <p>This is a page the user would use to add or remove inventory from the food storage tracker</p>
-            <p>would include functions for researching the UPC (API usage) and for adding/removing from inventory</p>
+            <h2>Scenarios</h2>
+            <ul>
+                <li><strong>How do I quickly add a new item to my food storage inventory?</strong>
+                    <p>An "update inventory" page will be provided for them to scan the upc of the item they are adding
+                        along with an input for the expiry date. This creates a frustration free item entry and look-up
+                        option for users.</p>
+                </li>
+                <li><strong>How long will my current food storage last my family based on what I have?</strong>
+                    <p>With the inventory tracking page, there is no more manual guessing about the oldest item in the
+                        inventory or how much food is needed to support your family.</p>
+                </li>
+            </ul>
         </section>
         <section>
-            <h2>Color Scheme for site</h2>
-            <p>header: </p>
+            <h2>Color Scheme</h2>
+            <ul>
+                <li>Header & Footer backgrounds: Eerie Black <code>(#131A22)</code></li>
+                <li>Body text on light backgrounds: Charcoal <code>(#232F3E)</code></li>
+                <li>Primary accent (headings, borders, key elements): Amazon Blue <code>(#146EB4)</code></li>
+                <li>Button and Link Accent Colors: Darker Teal <code>(#006666)</code></li>
+                <li>Main Page Backgrounds, Text on Dark Backgrounds: White <code>(#FFFFFF)</code></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li>Font Family: Roboto (Google Fonts)</li>
+                <li>Headings (h1, h2): Roboto, font-weight 700</li>
+                <li>Body text and paragraphs: Roboto, font-weight 400</li>
+                <li>UPC codes and inventory data: Roboto Mono (Google Fonts), font-weight 400</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Wireframe</h2>
+            <img src="images/mobile-wireframe.png" alt="Mobile Wireframe Image">
+            <img src="images/desktop-wireframe.png" alt="Desktop Wireframe Image">
         </section>
     </main>
     <footer>
@@ -49,4 +87,5 @@
         <p id="lastModified"></p>
     </footer>
 </body>
+
 </html>
