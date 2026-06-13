@@ -65,7 +65,7 @@ header div {
     gap: 1rem;
 }
 
-.header-h1 {
+.header-span {
     font-size: 2rem;
     color: var(--text-light);
 }
