@@ -1,9 +1,12 @@
 :root {
     --hf-background: #131A22;
-    --text-color: #232F3E;
-    --accent1: #146EB4;
-    --accent2: #006666;
+    --text-light: #FFFFFF;
+    --text-dark: #232F3E;
+    --accent-primary: #146EB4;
+    --accent-action: #006666;
     --main-background: #FFFFFF;
+    --font-main: 'Roboto', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
     --transition-speed: 0.3s;
 }
 
@@ -14,126 +17,328 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-main);
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--text-dark);
     background-color: var(--main-background);
     line-height: 1.6;
-}
-
-/* ===== Header & Footer ===== */
-header {
-    background-color: var(--hf-background);
-    color: var(--main-background);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-}
-
-footer {
-    background-color: var(--hf-background);
-    color: var(--main-background);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem 1rem;
-    flex-wrap: wrap;
+    min-height: 100vh;
 }
 
-.social {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.social a img {
-    width: 28px;
-    height: 28px;
-    filter: brightness(0) invert(1);
-    transition: transform var(--transition-speed), opacity var(--transition-speed);
-}
-
-.social a img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-}
-
-/* ===== Navigation Hamburger ===== */
-#ham-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* ===== Main Content ===== */
-main {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-/* ===== Headings ===== */
-h2 {
-    position: absolute;
-    top: -1.2rem;
-    left: -0.75rem;
-    background-color: var(--hf-background);
-    color: var(--main-background);
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    padding: 0.5rem 1.25rem;
-    border-radius: 6px;
-    white-space: nowrap;
-}
-
-/* ===== Sections ===== */
-section {
-    position: relative;
-    margin: 2rem 0.5rem 1rem;
-    padding: 2.5rem 1.5rem 1.5rem;
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-}
-
-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 5px;
-    border-radius: 10px;
-    align-self: center;
-}
-
-/* ===== Lists ===== */
-ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.5rem;
-}
-
-/* ===== Code Elements (hex values) ===== */
-code {
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
-    background-color: #e8e8e8;
-    padding: 0.15rem 0.4rem;
-    border-radius: 3px;
-}
-
-/* ===== Links ===== */
 a {
-    color: var(--accent2);
+    color: var(--accent-action);
     text-decoration: none;
-    transition: color var(--transition-speed);
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Header & Footer ===== */
+h1,
+h2,
+h3 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+header {
+    background-color: var(--hf-background);
+    color: var(--text-light);
+    padding: 5px;
+    gap: .5rem;
+    position: relative;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-h1 {
+    font-size: 2rem;
+    color: var(--text-light);
+}
+
+#ham-btn {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    color: var(--text-light);
+    font-size: 2rem;
+
+}
+
+#ham-btn::before {
+    content: "\2630";
+}
+
+#ham-btn.open::before {
+    content: "\2715";
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--hf-background);
+    width: 100%;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: var(--text-light);
+    padding: 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+nav a.active {
+    border-bottom: 2px solid var(--accent-primary);
+}
+
+main {
+    padding: 10px;
+    max-width: 100%;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--accent-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--accent-primary);
+    padding-bottom: 0.25rem;
+}
+
+h3 {
+    margin-bottom: 2.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+#duration-form label {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+}
+
+input,
+select {
+    padding: 0.5rem;
+    border: 1px solid var(--hf-background);
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+button[type="submit"] {
+    background-color: var(--accent-action);
+    color: var(--text-light);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--accent-primary);
+}
+
+footer {
+    background-color: var(--hf-background);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.social img {
+    filter: invert(1) brightness(2);
+}
+
+footer a {
+    color: var(--text-light);
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 90vw;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+dialog a {
+    display: inline;
+    background-color: var(--accent-primary);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0.25rem;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog h2 {
+    margin-bottom: 0.5rem;
+    background-color: var(--hf-background);
+    color: var(--text-light);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+dialog button,
+.detail-btn {
+    background-color: var(--accent-action);
+    color: var(--text-light);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0.25rem;
+}
+
+dialog button:hover {
+    background-color: var(--accent-primary);
+}
+
+dialog img {
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+dialog img[src=""],
+dialog img:not([src]) {
+    display: none;
+}
+
+#delete-item-btn {
+    background-color: #cc0000;
+    color: var(--text-light);
+}
+
+#delete-item-btn:hover {
+    background-color: #990000;
+}
+
+.hero {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.summary-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--text-light);
+}
+
+.stat-card {
+    background-color: var(--accent-primary);
+    color: var(--text-light);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#upc-input {
+    font-family: var(--font-mono);
+}
+
+.inventory-card {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inventory-card img {
+    margin: 0 auto 0.5rem;
+    display: block;
+    border-radius: 10px;
+}
+
+.inventory-card .upc {
+    font-family: var(--font-mono);
+}
+
+.detail-btn {
+    background-color: var(--accent-action);
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: auto;
+    width: 100%;
+}
+
+.detail-btn:hover {
+    background-color: var(--accent-primary);
 }

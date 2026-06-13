@@ -1,50 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Storage Inventory Manager</title>
     <meta name="author" content="Anthony Sanders">
-    <meta name="description" content="Welcome to a personalized tool for preparing for and tracking food storage inventory.">
+    <meta name="description"
+        content="Welcome to a personalized tool for preparing for and tracking food storage inventory.">
+
+    <!-- Social Meta Details -->
+    <meta property="og:title" content="Homepage - Food Storage Inventory Tracker">
+    <meta property="og:description"
+        content="Rid yourself of the frustration associated with keeping up with a food storage inventory. Automate with our tool which takes all the guess work out of it!">
+    <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/finalproject/images/store-house.svg">
+    <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/finalproject/index.html">
 
     <!-- Scripts -->
-    <script src="scripts/base.js" defer></script>
+    <script src="scripts/base.js" type="module"></script>
+    <script src="scripts/home.js" type="module"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/store-house.svg">
+
     <!-- Imported Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400&display=swap"
         rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
 </head>
+
 <body>
     <header>
-        <img src="images/store-house.svg" alt="Site Logo" width="100" height="100">
-        <span>Food Storage & Inventory Management</span>
+        <div>
+            <img src="images/store-house.svg" alt="Site Logo" width="100" height="100">
+            <h1 class="header-h1">Food Storage & Inventory Management</h1>
+        </div>
         <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="inventory-update.html">Update Inventory</a>
+            <a href="inventory-tracker.html">Track Inventory</a>
+        </nav>
     </header>
     <main>
-        <!-- <dialog>
-            <h2>Modal Dialog</h2>
-            <p>This is a modal dialog.</p>
-            <button id="closeModal">Close</button>
-        </dialog> -->
-        <h1>Home</h1>
-        <section>
-            <h2>Getting Started</h2>
-            <p>explanation of how to use the tool</p>
+        <section class="hero">
+            <h3>Know What You Have. Know How Long It Lasts.</h3>
+            <p>Building a food storage supply shouldn't mean guessing what's in your
+                pantry or wondering if you have enough to sustain your family. This tool
+                helps you scan, track, and plan — so you always know exactly where you stand.</p>
         </section>
-        <section>
-            <h2>Family Inputs</h2>
-            <p>explanation here</p>
-            <p>form here</p>
+        <section class="family-config">
+            <h3>Family Information</h3>
+            <p>How many people are you feeding? Enter your household details below so
+                we can calculate how long your stored food will last based on recommended
+                daily servings per person.</p>
+            <form id="family-form">
+                <label>Adults <input id="adults" type="number" name="adults" required title="num-adults"
+                        placeholder="2"></label>
+                <label>Children <input id="children" type="number" name="children" title="num-children"
+                        placeholder="2"></label>
+                <button type="submit">Save Family Inputs</button>
+            </form>
+            <p id="form-output"></p>
         </section>
-        <section>
-            <h2>duration selector</h2>
-            <p>explanation here</p>
-            <p>form here</p>
+        <section id="duration-goal">
+            <h3>Set Your Duration Goal</h3>
+            <p>How prepared do you want to be? Select a target duration below. We'll
+                use this to show your progress and let you know what gaps remain in your
+                supply.</p>
+            <form id="duration-form">
+                <label><input type="radio" name="duration" value="1"> 1 Month</label>
+                <label><input type="radio" name="duration" value="3"> 3 Months</label>
+                <label><input type="radio" name="duration" value="6"> 6 Months</label>
+                <label><input type="radio" name="duration" value="12"> 12 Months</label>
+                <button type="submit">Save Duration Goal</button>
+            </form>
         </section>
-        <section>
-            <p>call to action within output of what's needed</p>
+        <section id="status-cta">
+            <h3>Your Progress</h3>
+            <div id="inventory-progress">
+                <p>You haven't added any items yet. Once you configure your family
+                    and start scanning items, your progress toward your storage goal will
+                    appear here.</p>
+            </div>
+        </section>
+        <section class="feedback">
+            <h3>Send Us Feedback</h3>
+            <form action="thankyou.html" method="get">
+                <label>Name <input type="text" name="name" required></label>
+                <label>Email <input type="email" name="email" required></label>
+                <label>Comments <textarea name="comments" required></textarea></label>
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
@@ -61,6 +114,11 @@
         </div>
         <p>&copy; <span id="currentYear"></span>| Anthony Sanders | WI, USA</p>
         <p id="lastModified"></p>
+        <a href="attributions.html">Attributions</a>
+        <span> | </span>
+        <a href="https://www.loom.com/share/6be490d1790643aca0a5a9c44f99f2d9" target="_blank" rel="noopener">Video
+            Demonstration</a>
     </footer>
 </body>
+
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Inventory | Food Storage Inventory Manager</title>
+    <meta name="author" content="Anthony Sanders">
+    <meta name="description" content="Add items to your food storage inventory by
+        entering UPC barcodes and expiration dates.">
+
+    <!-- Social Meta Details -->
+    <meta property="og:title" content="Update Inventory - Food Storage Inventory Tracker">
+    <meta property="og:description" content="Add items to your food storage inventory by
+        entering UPC barcodes and expiration dates.">
+    <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/finalproject/images/store-house.svg">
+    <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/finalproject/inventory-update.html">
+
+    <!-- Scripts -->
+    <script src="scripts/base.js" type="module"></script>
+    <script src="scripts/update.js" type="module"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/store-house.svg">
+
+    <!-- Imported Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css?v=2">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/store-house.svg" alt="Site Logo" width="100" height="100">
+            <h1 class="header-h1">Food Storage & Inventory Management</h1>
+        </div>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="inventory-update.html" class="active">Update Inventory</a>
+            <a href="inventory-tracker.html">Track Inventory</a>
+        </nav>
+    </header>
+    <main>
+        <dialog id="confirm-modal">
+            <h2>Item Added!</h2>
+            <p id="modal-item-summary"></p>
+            <button id="add-another-item">Add Another Item</button>
+            <a href="inventory-tracker.html">View My Inventory</a>
+        </dialog>
+        <section class="upc-lookup">
+            <h2>Add to Inventory</h2>
+            <p>Enter a product's UPC barcode below. We'll look up the item details for you.</p>
+            <form id="upc-form">
+                <label>Enter UPC <input type="text" id="upc-input" placeholder="e.g., 041331092098"
+                        pattern="[0-9]{8,13}" required></label>
+                <button type="submit">Look Up Product</button>
+            </form>
+            <div id="lookup-result"></div>
+        </section>
+        <section class="add-item-details">
+            <h2>Confirm & Add Item</h2>
+            <p>Verify the details below, set the quantity and expiration date.</p>
+            <form id="add-item-form">
+                <label>Product Name <input type="text" id="product-name" readonly></label>
+                <label>Brand <input type="text" id="product-brand" readonly></label>
+                <label>Category <input type="text" id="product-category" readonly></label>
+                <label>Expiry Date <input type="date" id="product-expiry" required></label>
+                <label>Quantity <input type="number" id="product-quantity" required
+                        placeholder="Be sure to enter quantity per expiration!" min="1" value="1"></label>
+                <button type="submit">Add to Inventory</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/anthonysanderslds">
+                <img src="images/github-svgrepo-com.svg" alt="GitHub Icon" width="24" height="24">
+            </a>
+            <a href="https://www.linkedin.com/in/anthony-sanders-a8a59238">
+                <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" width="24" height="24">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img src="images/facebook-svgrepo-com.svg" alt="Facebook Icon" width="24" height="24">
+            </a>
+        </div>
+        <p>&copy; <span id="currentYear"></span>| Anthony Sanders | WI, USA</p>
+        <p id="lastModified"></p>
+        <a href="attributions.html">Attributions</a>
+        <span> | </span>
+        <a href="https://www.loom.com/share/6be490d1790643aca0a5a9c44f99f2d9" rel="noopener" target="_blank">Video Demonstration</a>
+    </footer>
+</body>
+
+</html>

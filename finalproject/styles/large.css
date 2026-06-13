@@ -1,0 +1,86 @@
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #ham-btn {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+    }
+
+    nav a {
+        border-bottom: none;
+        padding: 10px;
+    }
+
+    nav a:hover {
+        background-color: var(--accent-primary);
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    main {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    #family-form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: 1rem;
+    }
+
+    .summary-cards {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stat-card {
+        flex: 1;
+    }
+
+    #duration-form {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #controls-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #inventory-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+
+    dialog {
+        max-width: 500px;
+    }
+}

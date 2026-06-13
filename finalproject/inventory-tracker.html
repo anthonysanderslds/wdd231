@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Inventory | Food Storage Inventory Manager</title>
+    <meta name="author" content="Anthony Sanders">
+    <meta name="description" content="View and manage your food storage inventory.
+        Filter by category, check expiration dates, and track your
+        progress toward your storage goals.">
+
+    <!-- Social Meta Details -->
+    <meta property="og:title" content="Track Inventory - Food Storage Inventory Tracker">
+    <meta property="og:description" content="View and manage your food storage inventory.
+        Filter by category, check expiration dates, and track your
+        progress toward your storage goals.">
+    <meta property="og:image" content="https://anthonysanderslds.github.io/wdd231/finalproject/images/store-house.svg">
+    <meta property="og:url" content="https://anthonysanderslds.github.io/wdd231/finalproject/inventory-tracker.html">
+
+    <!-- Scripts -->
+    <script src="scripts/base.js" type="module"></script>
+    <script src="scripts/tracker.js" type="module"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/store-house.svg">
+
+    <!-- Imported Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Mono:wght@400&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css?v=2">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="images/store-house.svg" alt="Site Logo" width="100" height="100">
+            <h1 class="header-h1">Food Storage & Inventory Management</h1>
+        </div>
+        <button id="ham-btn" class="hamburger"></button>
+        <nav id="nav-bar" class="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="inventory-update.html">Update Inventory</a>
+            <a href="inventory-tracker.html" class="active">Track Inventory</a>
+        </nav>
+    </header>
+    <main>
+        <section class="inventory-summary">
+            <h2>Your Inventory At a Glance</h2>
+            <div class="summary-cards">
+                <div class="stat-card">
+                    <span>Total Items</span>
+                    <p id="total-items"></p>
+                </div>
+                <div class="stat-card">
+                    <span>Days of Supply</span>
+                    <p id="days-supply"></p>
+                </div>
+                <div class="stat-card">
+                    <span>Expiring Soon</span>
+                    <p id="expiring-soon"></p>
+                </div>
+            </div>
+        </section>
+        <section class="inventory-controls">
+            <h2>Sort Your Items</h2>
+            <div id="controls-bar">
+                <label>Category<select name="Category Filter" id="filter-category">
+                        <option value="all-categories" selected>All Categories</option>
+                        <option value="canned-goods">Canned Goods</option>
+                        <option value="dry-goods">Dry Goods</option>
+                        <option value="frozen">Frozen</option>
+                        <option value="beverages">Beverages</option>
+                        <option value="other">Other</option>
+                    </select></label>
+                <label>Sort<select name="Name Filter" id="sort-by">
+                        <option value="name-az">Name (A-Z)</option>
+                        <option value="name-za">Name (Z-A)</option>
+                        <option value="expire-soon">Expiry (Soonest First)</option>
+                        <option value="expire-last">Expiry (Latest First)</option>
+                        <option value="quantity">Quantity (High to Low)</option>
+                    </select></label>
+                <label>Search<input type="text" id="search-input" placeholder="Search Items..."></label>
+            </div>
+        </section>
+        <section class="inventory-list">
+            <p id="item-count"></p>
+            <div id="inventory-container"></div>
+        </section>
+        <dialog id="modal-item-detail">
+            <h2 id="detail-title"></h2>
+            <div id="detail-content"></div>
+            <div id="detail-actions">
+                <button id="delete-item-btn">Delete Item</button>
+                <button id="close-detail-btn">Close</button>
+            </div>
+        </dialog>
+    </main>
+    <footer>
+        <div class="social">
+            <a href="https://github.com/anthonysanderslds">
+                <img src="images/github-svgrepo-com.svg" alt="GitHub Icon" width="24" height="24" loading="lazy">
+            </a>
+            <a href="https://www.linkedin.com/in/anthony-sanders-a8a59238">
+                <img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" width="24" height="24" loading="lazy">
+            </a>
+            <a href="https://www.facebook.com/">
+                <img src="images/facebook-svgrepo-com.svg" alt="Facebook Icon" width="24" height="24" loading="lazy">
+            </a>
+        </div>
+        <p>&copy; <span id="currentYear"></span>| Anthony Sanders | WI, USA</p>
+        <p id="lastModified"></p>
+        <a href="attributions.html">Attributions</a>
+        <span> | </span>
+        <a href="https://www.loom.com/share/6be490d1790643aca0a5a9c44f99f2d9" target="_blank" rel="noopener">Video Demonstration</a>
+    </footer>
+</body>
+
+</html>
