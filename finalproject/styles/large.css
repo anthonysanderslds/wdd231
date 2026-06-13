@@ -31,6 +31,12 @@
         text-decoration: none;
     }
 
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
     #family-form {
         flex-direction: row;
         flex-wrap: wrap;
@@ -76,13 +82,5 @@
 
     dialog {
         max-width: 500px;
-    }
-
-    .feedback {
-        max-width: 400px;
-        border: 1px solid var(--accent-primary);
-        padding: 10px;
-        border-radius: 10px;
-        margin: 0 auto;
     }
 }
